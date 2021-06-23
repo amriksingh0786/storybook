@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import "./Homepage.css"
 import axios from "axios";
+import Navbar from "../Navbar/Navbar"
 function Homepage() {
     const [imageData,setImageData] = useState([]);
     const [isLoading,setIsLoading] = useState(true);
@@ -34,23 +35,27 @@ function Homepage() {
         })
       }, []);
     return (
-        <div >
-            
+        <div>
+            <Navbar/>
             <main>
             <section  className="cards">
              {imageData&&imageData.map((image,index)=>(<>
-        <article>
+             <div style={{display:"flex",flexDirection:"column",width:"100%",margin:"10px",justifyContent:"center"}}>
+        <div>
           <img key={index} className="article-img" src={image.avatar} alt=" " />
-          <h1 className="article-title">
+          
+          
+        </div>
+        <div >          <h1 className="article-title">
             {image.first_name} {image.last_name}
-            <br></br>
+           <br />
             
             {image.email} 
-         
+            
+
           </h1>
-          
-          
-        </article>
+          </div>
+          </div>
         </>))} 
         </section>
        {/*  <section class="cards">
