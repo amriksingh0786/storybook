@@ -25,7 +25,8 @@ a {
 
 .main-nav {
 	margin-top: 5px;
-
+    align-items: center;
+        justify-content: center;
 }
 .logo-nav a,
 .main-nav a {
@@ -57,12 +58,11 @@ a {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+    justify-content: center;
 }
 
 
-/* ================================= 
-  Media Queries
-==================================== */
+
 
 
 * {
@@ -76,26 +76,25 @@ body {
 }
 
 @media (min-width: 769px) {
-	.header-nav,
-	.main-nav {
-		display: flex;
-	}
+	
 	.header-nav {
-		flex-direction: column;
+		flex-direction: row;
 		align-items: center;
-    	
+        justify-content: center;
 	}
     .header-nav{
 		width: 80%;
 		margin: 0 auto;
 		max-width: 1150px;
+        justify-content: center;
 	}
 }
 
 @media (min-width: 1025px) {
 	.header-nav {
 		flex-direction: row;
-		justify-content: space-between;
+		align-items: center;
+        justify-content: center;
 	}
 
 }
