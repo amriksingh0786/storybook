@@ -7,7 +7,7 @@ function Navbar() {
         <ul class="main-nav">
           
           <li >
-            <a href="#">User List</a>
+            <a id="title" href="#">User List</a>
           </li>
         </ul>
       </header>

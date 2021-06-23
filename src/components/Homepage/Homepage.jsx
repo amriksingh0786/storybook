@@ -6,16 +6,6 @@ function Homepage() {
     const [imageData,setImageData] = useState([]);
     const [isLoading,setIsLoading] = useState(true);
     const [error,setError] = useState(null);
-    /* useEffect(async () => {
-        const user = await axios.get(
-          "https://reqres.in/api/users/"
-        )
-        let dataRec =  await user.json();
-        setImageData( dataRec)
-        console.log(imageData);
-        console.log("data",user.data.data) 
-       
-      }, []); */
       const fetchData = async () => {
         let res = await fetch(
           "https://reqres.in/api/users/" 
